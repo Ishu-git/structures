@@ -1,16 +1,20 @@
 Define a structure named "Date" with members day, month, and year. Write a C program to input two dates and find the difference in days between them.
 *****************************************************************************************************************************************************
-      #include<stdio.h>
-    #include<stdlib.h>
-    struct date{
-        int dd1,mm1,yy1,dd2,mm2,yy2;
-    };
-    int main(){
-        struct date d;
-        scanf("%d%d%d%d%d%d",&d.dd1,&d.mm1,&d.yy1,&d.dd2,&d.mm2,&d.yy2);
-        int dd,mm,yy;
-        yy=abs(d.yy1-d.yy2);
-        mm=abs(d.mm1-d.mm2);
-        dd=abs(d.dd1-d.dd2);
-        printf("%d years%dmonths%ddays",yy,mm,dd);
-    }
+     #include<stdio.h>
+#include<stdlib.h>
+struct date{
+    int dd1,mm1,yy1,dd2,mm2,yy2;
+};
+int main(){
+    struct date d;
+    scanf("%d%d%d%d%d%d",&d.dd1,&d.mm1,&d.yy1,&d.dd2,&d.mm2,&d.yy2);
+    int dd,mm,yy;
+    yy=abs(d.yy1-d.yy2);
+    mm=abs(d.mm1-d.mm2);
+    dd=abs(d.dd1-d.dd2);
+    printf("%d",yy);
+    // difference in days
+    int days;
+    days=dd+(mm*30)+(yy*365);
+    printf("%d",days);
+}
