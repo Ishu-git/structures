@@ -1,0 +1,17 @@
+Create a structure named Complex to represent a complex number with real and imaginary parts. Write a C program to add and multiply two complex numbers.
+********************************************************************************************************************************************************
+#include<stdio.h>
+struct complex{
+    int a1,a2;
+    int b1,b2;
+};
+int main(){
+    struct complex c;
+    scanf("%d%d%d%d",&c.a1,&c.b1,&c.a2,&c.b2);  //num1-->a1+ib1,num2-->a2+ib2
+    int sum1,mul1,sum2,mul2;
+    sum1=c.a1+c.a2;
+    sum2=c.b1+c.b2;
+    mul1=c.a1*c.a2;
+    mul2=c.b1*c.b2;
+    printf("sum=%d+i%d\nmul=%d+i%d",sum1,sum2,mul1,mul2);
+}
